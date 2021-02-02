@@ -5,7 +5,8 @@ console.log('sanity check!')
 
 
 
-let pokemonInput = document.getElementById('pokemon-names')
+let info = document.querySelector('#pokemonStats')
+let pokeName = document.querySelector('h2');
 
 
 
@@ -13,9 +14,13 @@ const pokemonNames = ["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon"
 
 // for (let i = 0; i < pokemonNames.length; i++) {
 //     let li = document.createElement('li');
-//     li.innerHTML = `<option value='${pokemonNames[i]}'`;
-//     pokemonInput.append('li');
+//     li.innerHTML = `<option value='${pokemonNames[i]}'>`;
+//     pokemonStats.appendChild('li');
 // }
+
+// let li = document.createElement("li");
+// li.textContent = "pickachu";
+// document.ul.appendChild(li);
 
 
 
@@ -25,6 +30,11 @@ const pokemonNames = ["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon"
 
 let pokeUrl = 'https://pokeapi.co/api/v2/pokemon/'
 
+// const addPokeInfo = (pokemon) => {
+//     let li = document.createElement('li');
+//     li.textContent = 
+// }
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault()
     let response = input.value.toLowerCase();
@@ -33,7 +43,11 @@ form.addEventListener('submit', (e)=>{
         return responseData.json();
     })
     .then((jsonData) => {
+        document.querySelector('h2').append(jsonData.name);
+        console.log(jsonData.name);
         jsonData.types.forEach((result) => {
+            document.querySelector('type').append(result.type.name);
+            console.log(result.type.name);
             fetch(result.type.url)
             .then((typeresonseData) => {
                 return typeresonseData.json();
@@ -49,6 +63,9 @@ form.addEventListener('submit', (e)=>{
         
                 typejsonData.damage_relations.no_damage_to.forEach(noDamageTo => console.log("no damage to " + noDamageTo.name))
             })
+    
         })
+        
     })
+    
 })
