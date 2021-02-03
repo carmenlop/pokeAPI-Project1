@@ -72,18 +72,18 @@ form.addEventListener('submit', (e)=>{
     
         })
         let formReset = document.getElementById('form');
-                formReset.innerHTML = '';
+        formReset.innerHTML = '';
 
-                let refreshButton = document.createElement('input');
-                refreshButton.setAttribute('type', 'button');
-                refreshButton.setAttribute('id', 'newPokemonButton');
-                refreshButton.setAttribute('value', 'Choose a New Pokemon');
-                document.getElementById('refreshButton').append(refreshButton);
+        let refreshButton = document.createElement('input');
+        refreshButton.setAttribute('type', 'button');
+        refreshButton.setAttribute('id', 'newPokemonButton');
+        refreshButton.setAttribute('value', 'Choose a New Pokemon');
+        document.getElementById('refreshButton').append(refreshButton);
 
-                let buttonElement = document.getElementById('newPokemonButton');
-                buttonElement.addEventListener("click", (evt) => {
-                    evt.preventDefault();
-                    location.reload();
+        let buttonElement = document.getElementById('newPokemonButton');
+        buttonElement.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        location.reload();
     })
     
 })
