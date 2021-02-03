@@ -9,25 +9,35 @@
 <body>
     <h1>pokeAPI</h1>
     <form id="form">
-        <label for="pokemon-choice">Choose a Pokemon:</label>
-        <input list="pokemon-names" id="pokemon-choice" name="pokemon-choice" />
-        <datalist id="pokemon-names">
-            
-        </datalist>
-
         <input id="input" type="text" required="required">
-        <input type="submit">
+        <input type="submit" value="I Choose You!">
     </form>
 
     <div id="pokeInfo">
-        <h2></h2>
-        <type></type>
-        <type></type>
+        <div id="pokeName">
+            <h2></h2>
+            <type></type>
+            <img>
+        </div>
+        <div id="doubleDamageTo">
+            <p></p>
+        </div>
+        <div id="halfDamageTo">
+            <p></p>
+        </div>
+        <div id="noDamageTo">
+            <p></p>
+        </div>
+        <div id="doubleDamageFrom">
+            <p></p>
+        </div>
+        <div id="halfDamageFrom">
+            <p></p>
+        </div>
+        <div id="noDamageFrom">
+            <p></p>
+        </div>
     </div>
-
-    <ul id="pokemonStats">
-
-    </ul>
     
 <script src='js/main.js'></script>
 </body>
