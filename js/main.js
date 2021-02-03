@@ -17,7 +17,10 @@ form.addEventListener('submit', (e)=>{
         document.querySelector('h2').append(jsonData.name);
         document.querySelector('img').setAttribute('src', jsonData.sprites.front_default);
         jsonData.types.forEach((result) => {
-            document.querySelector('type').append(result.type.name);
+            let pokemonType = document.createElement('li');
+            pokemonType.setAttribute('class', 'test');
+            pokemonType.innerHTML = result.type.name;
+            document.getElementById('pokeType').append(pokemonType);
             fetch(result.type.url)
             .then((typeresonseData) => {
                 return typeresonseData.json();
@@ -63,10 +66,24 @@ form.addEventListener('submit', (e)=>{
                     ndtItem.innerHTML = "no damage to " + noDamageTo.name
                     document.getElementById('noDamageToList').append(ndtItem)
                 })
+                })
+                
             })
     
         })
-        
+        let formReset = document.getElementById('form');
+                formReset.innerHTML = '';
+
+                let refreshButton = document.createElement('input');
+                refreshButton.setAttribute('type', 'button');
+                refreshButton.setAttribute('id', 'newPokemonButton');
+                refreshButton.setAttribute('value', 'Choose a New Pokemon');
+                document.getElementById('refreshButton').append(refreshButton);
+
+                let buttonElement = document.getElementById('newPokemonButton');
+                buttonElement.addEventListener("click", (evt) => {
+                    evt.preventDefault();
+                    location.reload();
     })
     
 })
