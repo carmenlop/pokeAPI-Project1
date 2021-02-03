@@ -15,7 +15,7 @@ form.addEventListener('submit', (e)=>{
     })
     .then((jsonData) => {
         document.querySelector('h2').append(jsonData.name);
-        document.querySelector('img').setAttribute('src', jsonData.sprites.front_default);
+        document.getElementById('pokeImage').setAttribute('src', jsonData.sprites.front_default);
         jsonData.types.forEach((result) => {
             let pokemonType = document.createElement('li');
             pokemonType.setAttribute('class', 'test');
@@ -71,6 +71,10 @@ form.addEventListener('submit', (e)=>{
             })
     
         })
+
+        // not sure yet if I want to remove the logo when the pokemon info is displayed
+        // document.getElementById('pokemonLogo').innerHTML = '';
+
         let formReset = document.getElementById('form');
         formReset.innerHTML = '';
 
