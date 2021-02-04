@@ -48,7 +48,7 @@ form {
 
 #noDamageTo {
     grid-column: 4 / 5;
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
 } 
 
 #refreshButton {
@@ -60,14 +60,14 @@ form {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 40px 80px 40px auto 40px 40px;
+    grid-template-rows: 40px 100px 40px auto 40px 40px;
     height: 100vh;
     justify-items: center;
     align-items: center;
