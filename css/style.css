@@ -1,14 +1,17 @@
 * {
     box-sizing: border-box;
+    background-color: #F0F0F0;
+    font-style: 'Halvetica';
 }
 
 .test {
-    color: green;
+    color: black;
 }
 
 #pokemonLogo {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    mix-blend-mode: multiply;
 }
 
 form {
@@ -19,16 +22,33 @@ form {
 #pokeName {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    /* background-color: #F0F0F0;
+    border-color: #DADADA;
+    border-style: inset; */
+}
+
+h2 {
+    font-size: 2 rem;
+}
+
+li {
+    list-style-type: none;
 }
 
 #doubleDamageTo {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    /* background-color: #F0F0F0;
+    border-color: #DADADA;
+    border-style: inset; */
 }
 
 #doubleDamageFrom {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    /* background-color: #F0F0F0;
+    border-color: #DADADA;
+    border-style: inset; */
 }
 
 #halfDamageFrom {

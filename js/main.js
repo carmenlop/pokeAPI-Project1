@@ -16,11 +16,9 @@ form.addEventListener('submit', (e)=>{
     .then((jsonData) => {
         document.querySelector('h2').append(jsonData.name);
         document.getElementById('pokeImageFront').setAttribute('src', jsonData.sprites.front_default);
+        document.querySelector('.pokeName').setAttribute('id', 'pokeName');
         jsonData.types.forEach((result) => {
-            let pokemonType = document.createElement('li');
-            pokemonType.setAttribute('class', 'test');
-            pokemonType.innerHTML = result.type.name;
-            document.getElementById('pokeType').append(pokemonType);
+            document.getElementById('pokeType').textContent = result.type.name;
             fetch(result.type.url)
             .then((typeresonseData) => {
                 return typeresonseData.json();
@@ -66,7 +64,7 @@ form.addEventListener('submit', (e)=>{
                 typejsonData.damage_relations.double_damage_from.forEach(doubleDamageFrom => {
                     let ddfItem = document.createElement('li');
                     ddfItem.setAttribute('class', 'test');
-                    ddfItem.innerHTML = "double damage from " + doubleDamageFrom.name;
+                    ddfItem.innerHTML = doubleDamageFrom.name;
                     document.getElementById('doubleDamageFromList').append(ddfItem);
                 })
         
