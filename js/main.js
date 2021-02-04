@@ -109,9 +109,6 @@ form.addEventListener('submit', (e)=>{
     
         })
 
-        // not sure yet if I want to remove the logo when the pokemon info is displayed
-        // document.getElementById('pokemonLogo').innerHTML = '';
-
         let formReset = document.getElementById('form');
         formReset.innerHTML = '';
 
