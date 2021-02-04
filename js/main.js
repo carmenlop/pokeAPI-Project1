@@ -1,9 +1,3 @@
-console.log('sanity check!')
-
-
-// https://pokeapi.co/api/v2/pokemon/{name}
-
-
 let pokeUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
 form.addEventListener('submit', (e)=>{
@@ -104,8 +98,11 @@ form.addEventListener('submit', (e)=>{
                     ndtItem.innerHTML = noDamageTo.name;
                     document.getElementById('noDamageToList').append(ndtItem);
                 });
-                });
-            });
+                
+            
+            })
+           
+
         });
 
         let formReset = document.getElementById('form');
@@ -119,8 +116,38 @@ form.addEventListener('submit', (e)=>{
 
         let buttonElement = document.getElementById('newPokemonButton');
         buttonElement.addEventListener("click", (evt) => {
-        evt.preventDefault();
-        location.reload();
-    });
+            evt.preventDefault();
+            location.reload();
+
+
+        
+        })
+    })
+
+    .catch((error) => {
+        let errorMessage = document.createElement('p');
+        errorMessage.setAttribute("id", "errorMessage");
+        errorMessage.textContent = "Did you spell that correctly?";
+        document.querySelector('body').append(errorMessage);
+        let formReset = document.getElementById('form');
+        formReset.innerHTML = '';
+
+        let refreshButton = document.createElement('input');
+        refreshButton.setAttribute('type', 'button');
+        refreshButton.setAttribute('id', 'newPokemonButton');
+        refreshButton.setAttribute('value', 'Choose a New Pokemon');
+        document.getElementById('refreshButton').append(refreshButton);
+
+        let buttonElement = document.getElementById('newPokemonButton');
+        buttonElement.addEventListener("click", (evt) => {
+            evt.preventDefault();
+            location.reload();
+
+
+        
+        })
+    })
+
+
     
 });
