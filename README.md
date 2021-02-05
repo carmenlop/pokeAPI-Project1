@@ -17,7 +17,7 @@ As a user, I want to search for my selected pokemon’s type, from there I want 
 
 
 ### Wireframes
-
+![Wireframes](/ref-images/pokeAPI-Wireframe.png)
 
 
 ### Unsolved Problems 
