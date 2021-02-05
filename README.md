@@ -24,3 +24,7 @@ As a user, I want to search for my selected pokemon’s type, from there I want 
 For further versions of this applications, the user will receive information on the damage from specific attacks made by their pokemon.
 There is an unsolved bug where the "Choose New Pokemon" button loads 2x on the page instead of one.
 There is a bug for "normal" type pokemon that does not happen for any other type of pokemon. The "normal" type pokemon information does not load properly.
+
+
+### Link to Application
+[pokeAPI Project 1](https://carmenlop.github.io/pokeAPI-Project1/)
